@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:orbit/pages/inicialIntroduction.dart';
-import 'package:orbit/pages/sign_up.dart';
+import 'package:orbit/view/pages/inicialIntroductionPage.dart';
+import 'package:orbit/view/pages/signInPage.dart';
+import 'package:orbit/view/pages/signUpPage.dart';
 
- 
 main() {
  runApp(const MyApp());
 }
@@ -16,6 +16,11 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
             primaryColor: Colors.deepPurple),
-        home: SignUp());
+       initialRoute: '/',
+    routes: {
+      '/': (context) => const SignInPage(),
+      '/SingUp': (context) => const SignUpPage(),
+    });
   }
 }
+ 
